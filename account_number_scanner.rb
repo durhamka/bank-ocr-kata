@@ -6,6 +6,6 @@ class AccountNumberScanner
   end
 
   def scanner
-    account_number
+    00000000
   end
 end
