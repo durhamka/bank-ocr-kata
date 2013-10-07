@@ -1,7 +1,13 @@
 class AccountNumberImporter
+  attr_reader :data
+
   def initialize(file)
-    File.open(file) do |file|
+    @data = File.open(file) do |file|
       file.read
     end
+  end
+
+  def lines
+    data.lines
   end
 end

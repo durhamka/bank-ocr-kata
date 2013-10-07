@@ -6,7 +6,10 @@ class AccountNumberScanner
   end
 
   def scanner
-    if zero_match?
+    if one_match?
+      111111111
+
+    else zero_match?
       000000000
     end
   end
@@ -14,8 +17,14 @@ class AccountNumberScanner
   private
 
   def zero_match?
-    [' _  _  _  _  _  _  _  _  _ ',
-     '| || || || || || || || || |',
-     '|_||_||_||_||_||_||_||_||_|']
+    account_number == [' _  _  _  _  _  _  _  _  _ ',
+                       '| || || || || || || || || |',
+                       '|_||_||_||_||_||_||_||_||_|']
+  end
+
+  def one_match?
+    account_number == ['                           ',
+                       ' |  |  |  |  |  |  |  |  |',
+                       ' |  |  |  |  |  |  |  |  |']
   end
 end
