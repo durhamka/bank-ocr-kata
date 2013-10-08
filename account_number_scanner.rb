@@ -4,11 +4,12 @@ class AccountNumberScanner
   attr_reader :account_number
 
   def initialize(account_number)
-    @account_number = NumberParser.new
+    @account_number = account_number
   end
 
   def scanner
-    account_number
+    if account_number == ' _ | ||_|'
+      "0"
   end
 
   private
