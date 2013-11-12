@@ -1,6 +1,4 @@
 class AccountNumberParser
-
-
   def self.parse(lines)
     account_numbers = []
     lines.each_with_index do |line, index|
